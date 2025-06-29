@@ -6,7 +6,7 @@ import pygame.image
 from pygame.font import Font
 from pygame.rect import Rect
 from pygame.surface import Surface
-from code.const import WIN_WIDTH, COLOR_PURPLE, MENU_OPTION, COLOR_PINK, COLOR_CREAM
+from code.const import WIN_WIDTH, C_PURPLE, MENU_OPTION, C_PINK, C_CREAM
 
 
 class Menu:
@@ -22,18 +22,18 @@ class Menu:
         while True:
             # DRAW IMAGES
             self.window.blit(source=self.surf, dest=self.rect)
-            self.menu_text(52, 'Fairy', COLOR_CREAM, ((WIN_WIDTH / 2), 110))
-            self.menu_text(50, 'Fairy', COLOR_PURPLE, ((WIN_WIDTH / 2), 110))
-            self.menu_text(52, 'Shooter', COLOR_CREAM, ((WIN_WIDTH / 2), 180))
-            self.menu_text(50, 'Shooter', COLOR_PURPLE, ((WIN_WIDTH / 2), 180))
+            self.menu_text(52, 'Fairy', C_CREAM, ((WIN_WIDTH / 2), 110))
+            self.menu_text(50, 'Fairy', C_PURPLE, ((WIN_WIDTH / 2), 110))
+            self.menu_text(52, 'Shooter', C_CREAM, ((WIN_WIDTH / 2), 180))
+            self.menu_text(50, 'Shooter', C_PURPLE, ((WIN_WIDTH / 2), 180))
 
             for i in range(len(MENU_OPTION)):
                 if i == menu_option:
-                    self.menu_text(26, MENU_OPTION[i], COLOR_CREAM, ((WIN_WIDTH / 2), 300 + 30 * i))
-                    self.menu_text(25, MENU_OPTION[i], COLOR_PURPLE, ((WIN_WIDTH / 2), 300 + 30 * i))
+                    self.menu_text(26, MENU_OPTION[i], C_CREAM, ((WIN_WIDTH / 2), 300 + 30 * i))
+                    self.menu_text(25, MENU_OPTION[i], C_PURPLE, ((WIN_WIDTH / 2), 300 + 30 * i))
                 else:
-                    self.menu_text(26, MENU_OPTION[i], COLOR_CREAM, ((WIN_WIDTH / 2), 300 + 30 * i))
-                    self.menu_text(25, MENU_OPTION[i], COLOR_PINK, ((WIN_WIDTH / 2), 300 + 30 * i))
+                    self.menu_text(26, MENU_OPTION[i], C_CREAM, ((WIN_WIDTH / 2), 300 + 30 * i))
+                    self.menu_text(25, MENU_OPTION[i], C_PINK, ((WIN_WIDTH / 2), 300 + 30 * i))
 
             pygame.display.flip()
 
